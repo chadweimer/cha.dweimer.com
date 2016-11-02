@@ -2,6 +2,7 @@ baseurl = "https://cha.dweimer.com/"
 title = "while my code's compiling"
 languageCode = "en-us"
 theme = "ghostwriter"
+publishdir = "docs"
 googleAnalytics = "UA-19191579-6"
 
 [Author]
