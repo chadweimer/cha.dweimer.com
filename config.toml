@@ -13,6 +13,7 @@ googleAnalytics = "UA-19191579-6"
     tag = "tags"
 
 [Params]
+    logo = "img/avatar.png"
     subtitle = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
 
 [Permalinks]
