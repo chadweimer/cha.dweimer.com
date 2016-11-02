@@ -1,21 +1,19 @@
 baseurl = "https://cha.dweimer.com/"
 title = "while my code's compiling"
 languageCode = "en-us"
-theme = "ghostwriter"
+theme = "beautifulhugo"
 publishdir = "docs"
 googleAnalytics = "UA-19191579-6"
 
 [Author]
-  name = "Chad Weimer"
+    name = "Chad Weimer"
+    github = "https://github.com/chadweimer"
 
 [Taxonomies]
     tag = "tags"
 
 [Params]
-    intro = true
-    headline = "while my code's compiling"
-    description = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
-    github = "https://github.com/chadweimer"
+    subtitle = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
 
 [Permalinks]
     post = "/:year/:month/:day/:filename/"
@@ -26,5 +24,5 @@ googleAnalytics = "UA-19191579-6"
     weight = 1
 [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/page/about/"
     weight = 2
