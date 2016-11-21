@@ -7,7 +7,7 @@ googleAnalytics = "UA-19191579-6"
 
 [Author]
     name = "Chad Weimer"
-    github = "https://github.com/chadweimer"
+    github = "chadweimer"
 
 [Taxonomies]
     tag = "tags"
