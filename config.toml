@@ -4,18 +4,15 @@ languageCode = "en-us"
 theme = "beautifulhugo"
 googleAnalytics = "UA-19191579-6"
 
-[Author]
+[author]
     name = "Chad Weimer"
     github = "chadweimer"
 
-[Taxonomies]
-    tag = "tags"
-
-[Params]
+[params]
     logo = "img/avatar-icon.png"
     subtitle = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
 
-[Permalinks]
+[permalinks]
     post = "/:year/:month/:day/:filename/"
 
 [[menu.main]]
