@@ -10,7 +10,13 @@ googleAnalytics = "UA-19191579-6"
 
 [params]
     logo = "img/avatar-icon.png"
-    subtitle = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
+    cover = "img/cover.jpg"
+    description = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
+    author = "Chad Weimer"
+    authorlocation = "San Diego, CA, USA"
+    authorwebsite = "https://cha.dweimer.com/"
+    githubName = "chadweimer"
+    share = false
 
 [permalinks]
     post = "/:year/:month/:day/:filename/"
