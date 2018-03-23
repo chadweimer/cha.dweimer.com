@@ -1,0 +1,15 @@
+image: cwmr/cha.dweimer.com:latest
+manifests:
+  -
+    image: cwmr/cha.dweimer.com:armhf
+    platform:
+      architecture: arm
+      variant: v7
+      os: linux
+  -
+    image: cwmr/cha.dweimer.com:amd64
+    platform:
+      architecture: amd64
+      features:
+        - sse
+      os: linux

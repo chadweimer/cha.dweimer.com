@@ -1,22 +1,24 @@
-baseurl = "https://cha.dweimer.com/"
+baseURL = "https://cha.dweimer.com/"
 title = "while my code's compiling"
 languageCode = "en-us"
-theme = "beautifulhugo"
-publishdir = "docs"
+theme = "casper"
 googleAnalytics = "UA-19191579-6"
 
-[Author]
+[author]
     name = "Chad Weimer"
     github = "chadweimer"
 
-[Taxonomies]
-    tag = "tags"
-
-[Params]
+[params]
     logo = "img/avatar-icon.png"
-    subtitle = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
+    cover = "img/cover.jpg"
+    description = "Personal blog of Chad Weimer, where I sometimes post (possibly) insightful things."
+    author = "Chad Weimer"
+    authorlocation = "San Diego, CA, USA"
+    authorwebsite = "https://cha.dweimer.com/"
+    githubName = "chadweimer"
+    share = false
 
-[Permalinks]
+[permalinks]
     post = "/:year/:month/:day/:filename/"
 
 [[menu.main]]
@@ -25,5 +27,5 @@ googleAnalytics = "UA-19191579-6"
     weight = 1
 [[menu.main]]
     name = "About"
-    url = "/page/about/"
+    url = "/page/about/me/"
     weight = 2
