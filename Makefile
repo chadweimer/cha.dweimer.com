@@ -1,12 +1,12 @@
 .PHONY: build
 build:
-	hugo
+	docker run --rm -it -v $$PWD:/src jguyomard/hugo-builder hugo
 	docker build -t cwmr\cha.dweimer.com .
 
 .PHONY: serve
 serve:
-	hugo server -D
+	docker run --rm -it -v $$PWD:/src jguyomard/hugo-builder hugo server -D
 
 .PHONY: run
 run: build
-	docker run --rm -d -p 1313:80 cwmr\cha.dweimer.com
+	docker run --rm -it -p 1313:80 cwmr\cha.dweimer.com
