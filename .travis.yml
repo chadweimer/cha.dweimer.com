@@ -12,14 +12,17 @@ script:
   - make
 
 after_success:
+  - curl -o manifest-tool https://github.com/estesp/manifest-tool/releases/download/v0.7.0/manifest-tool-linux-amd64
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
   - >
     if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
       docker push cwmr/cha.dweimer.com:amd64
       docker push cwmr/cha.dweimer.com:armhf
+      ./manifest-tool push from-spec manifest.yml
     else
       docker tag cwmr/cha.dweimer.com:amd64 cwmr/cha.dweimer.com:amd64-dev
       docker tag cwmr/cha.dweimer.com:armhf cwmr/cha.dweimer.com:armhf-dev
       docker push cwmr/cha.dweimer.com:amd64-dev
       docker push cwmr/cha.dweimer.com:armhf-dev
+      ./manifest-tool push from-spec manifest.dev.yml
     fi
