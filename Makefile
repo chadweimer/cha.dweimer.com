@@ -10,3 +10,4 @@ serve:
 .PHONY: run
 run: build
 	docker run --rm -it -p 1313:80 cwmr\cha.dweimer.com
+	
