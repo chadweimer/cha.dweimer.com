@@ -9,17 +9,18 @@ services:
 language: go
 
 script:
-  - make build
+  - make
 
 after_success:
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
   - >
     if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-      docker push cwmr/cha.dweimer.com:latest
-    elif [ -z "$TRAVIS_TAG" ]; then
-      docker tag cwmr/cha.dweimer.com:latest cwmr/cha.dweimer.com:dev
-      docker push cwmr/cha.dweimer.com:dev
+      docker push cwmr/cha.dweimer.com:amd64
+      docker push cwmr/cha.dweimer.com:armhf
+#      ./manifest-tool push from-spec manifest.yaml
     else
-      docker tag cwmr/cha.dweimer.com:latest cwmr/cha.dweimer.com:$TRAVIS_TAG
-      docker push cwmr/cha.dweimer.com:$TRAVIS_TAG
+      docker tag cwmr/cha.dweimer.com:amd64 cwmr/cha.dweimer.com:amd64-dev
+      docker tag cwmr/cha.dweimer.com:armhf cwmr/cha.dweimer.com:armhf-dev
+      docker push cwmr/cha.dweimer.com:amd64-dev
+      docker push cwmr/cha.dweimer.com:armhf-dev
     fi
