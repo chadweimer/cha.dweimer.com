@@ -1,7 +1,7 @@
-baseurl = "https://cha.dweimer.com/"
+baseURL = "https://cha.dweimer.com/"
 title = "while my code's compiling"
 languageCode = "en-us"
-theme = "beautifulhugo"
+theme = "casper"
 googleAnalytics = "UA-19191579-6"
 
 [author]
