@@ -1,0 +1,25 @@
+sudo: required
+
+notifications:
+  email: false
+
+services:
+  - docker
+
+language: go
+
+script:
+  - make build
+
+after_success:
+  - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+  - >
+    if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+      docker push cwmr/cha.dweimer.com:latest
+    elif [ -z "$TRAVIS_TAG" ]; then
+      docker tag cwmr/cha.dweimer.com:latest cwmr/cha.dweimer.com:dev
+      docker push cwmr/cha.dweimer.com:dev
+    else
+      docker tag cwmr/cha.dweimer.com:latest cwmr/cha.dweimer.com:$TRAVIS_TAG
+      docker push cwmr/cha.dweimer.com:$TRAVIS_TAG
+    fi
